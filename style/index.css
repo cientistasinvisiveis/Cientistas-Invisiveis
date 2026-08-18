@@ -1,0 +1,59 @@
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #CCDEFE;
+  --bg-tertiary: #FFDE98;
+
+  --title-primary: #D34604;
+  --title-secondary: #4C8EFF;
+
+  --text-primary: rgba(0, 0, 0, 0.76);
+  --text-secondary: #876859;
+
+  --border-color-primary: #FFDE98;
+  --border-color-secondary:#4C8EFF;
+  --accent: #4C8EFF;
+}
+
+@font-face {
+    font-family: 'Destaque';
+    src: url('../fonts/jaro regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; 
+}
+
+/* HEADER */
+.titulo {
+    color: var(--title-primary);
+    font-size: 4rem;
+}
+
+.bg-titulo {
+    background-color: var(--bg-tertiary) !important; 
+}
+
+/* ÁREAS DE CONHECIMENTO */
+
+.botao-area{
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    width: 100%;
+    max-width: 285px;
+    height: 196px; 
+
+    background-color: var(--bg-secondary);
+    padding: 15px;
+    border-radius: 60px;
+}
+
+/*  TEXTO EXPLICATIVO */
+
+.proposta {
+    display: flex;
+    justify-content: center;
+    
+}
