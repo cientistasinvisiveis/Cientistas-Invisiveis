@@ -79,12 +79,17 @@ main {
 
 .conteudo {
     width: auto; 
-    margin: clamp(1rem, 50vw + 0.5rem, 3.5rem);
+    padding-top: clamp(1rem, 50vw + 0.5rem, 3.5rem);
+    padding-right: clamp(1rem, 50vw + 0.5rem, 3.5rem);
+    padding-left: clamp(1rem, 50vw + 0.5rem, 3.5rem);
+    padding-bottom: 0;
 
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-content: flex-start; 
+    align-content: center; 
+
+    height: calc(100vh - 200px);   
     
 
 }
@@ -96,6 +101,9 @@ main {
     width: 100%;
     row-gap: 4rem;
     margin: 0;
+
+    height: calc(100% - 70px); 
+    max-height: calc(100% - 70px);
 }
 
 
@@ -104,7 +112,7 @@ main {
 .chamada-areas{
     display: block;
     width: 100%;
-    height: fit-content;
+    height: auto;
     color: var(--title-secondary);
 
     margin: clamp(1rem, 2vw + 0.5rem, 3rem);
