@@ -133,9 +133,10 @@ main {
     align-items: center;
     justify-content: center;
 
+    width: 100%;
+    aspect-ratio: 1 / 1;
 
-    max-width: 285px;
-    height: 196px; 
+    max-height: 240px;
 
     background-color: var(--bg-secondary);
     padding: 15px;
