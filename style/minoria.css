@@ -1,0 +1,260 @@
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #CCDEFE;
+  --bg-tertiary: #FFDE98;
+
+  --title-primary: #d34604;
+  --title-secondary: #4C8EFF;
+
+  --text-primary: rgba(0, 0, 0, 0.76);
+  --text-secondary: #876859;
+
+  --border-color-primary: #FFDE98;
+  --border-color-secondary:#4C8EFF;
+  --highlight : #4C8EFF;
+}
+
+@font-face {
+    font-family: 'destaque';
+    src: url('../fonts/jaro regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; 
+}
+
+@font-face {
+    font-family: 'padrao';
+    src: url('../fonts/ADLaMDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
+    font-family: "padrao";
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-right: clamp(1rem, 50vw + 0.5rem, 3.5rem);
+    padding-left: clamp(1rem, 50vw + 0.5rem, 3.5rem);
+}
+
+
+/* HEADER */
+.fundo-header {
+    background-color: var(--bg-tertiary) !important; 
+    padding: 25px
+}
+
+.navbar-toggler-icon {
+
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23d34604' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+.logo-img{
+    width: clamp(30px, 5vw, 80px);
+}
+
+.minoria img{
+    width: clamp(20px, 5vw, 60px);
+
+}
+
+.titulo {
+    color: var(--title-primary);
+    font-family: 'padrao';
+    font-size: clamp(1.5rem, 2vw + 1rem, 4rem);
+    margin: 0;
+}
+
+
+.conteudo {
+    width: 100%; 
+    padding: clamp(1rem, 4vw, 2rem) 1rem 0; 
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+
+    min-height: calc(100vh - 150px);
+    height: auto; 
+    margin-bottom: 4rem; 
+}
+
+.chamada-cientistas {
+    width: 100%;
+    color: var(--title-secondary);
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.chamada-cientistas h1 {
+    font-size: clamp(2rem, 4vw, 2.5rem); 
+}
+
+.carrossel-minorico {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--bg-secondary);
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+.slide-conteudo {
+    display: flex;
+    flex-direction: row; 
+    width: 100%;
+    height: 450px;      
+}
+
+
+.slide-imagem {
+    width: 50%;
+    height: 100%;
+}
+
+.slide-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cientista-info {
+    width: 50%;
+    height: 100%;
+    padding: 2.5rem 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.cabecalho-cientista {
+    display: flex;
+    align-items: center; 
+    gap: 0.5rem;   
+      
+}
+
+.nome-carrossel {
+    margin: 0;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    color: var(--title-primary);
+}
+
+
+.conhecer-cientista {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    background-color: var(--title-primary);
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.conhecer-cientista p {
+    margin: 0;
+    line-height: 1;
+}
+
+.descricao-carrossel {
+    text-align: justify;
+    padding-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .slide-conteudo {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .slide-imagem,
+    .cientista-info {
+        width: 100%;
+    }
+
+    .slide-imagem img {
+        height: 250px;
+    }
+
+    .cientista-info {
+        padding: 1.5rem;
+    }
+}
+
+
+.botao-carrossel .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2373A7FF' stroke='%2373A7FF' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.botao-carrossel .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2373A7FF' stroke='%2373A7FF' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.botao-carrossel .carousel-control-prev-icon,
+.botao-carrossel .carousel-control-next-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+
+.saiba-mais {
+    padding-top: 3rem;
+    color: var(--title-primary);
+    font-size: clamp(1.1rem, 1rem + 1.5vw, 2.2rem) !important;
+}
+
+
+.conteudo-movimento{
+    width: 100%; 
+    padding: clamp(1rem, 4vw, 3rem) 1rem 0; 
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+
+    min-height: calc(100vh - 400px);
+    height: auto; 
+}
+
+
+.titulo-historia-comunidade {
+    font-size: clamp(2rem, 4vw, 2.5rem); 
+    color: var(--title-primary);
+}
+
+.historia-comunidade {
+    padding: clamp(1.5rem, 3vw + 0.5rem, 3rem) clamp(1rem, 4vw, 2.5rem);
+    
+    max-width: 75ch;
+    margin: 0 auto;
+    
+    line-height: 1.7;
+    font-size: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);   
+}
+
+
+footer {
+    background-color: var(--bg-tertiary);
+    padding: 15px;
+    text-align: center;
+    color: var(--title-primary);
+
+    margin-top: 2rem;
+}

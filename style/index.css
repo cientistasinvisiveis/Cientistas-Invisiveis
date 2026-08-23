@@ -79,9 +79,8 @@ main {
 
 
 .conteudo {
-    width: 100%; /* Use 100% em vez de auto para containers flex */
+    width: 100%; 
 
-    /* Ajuste no clamp para não estourar em telas pequenas */
     padding-top: clamp(1rem, 5vw + 0.5rem, 2rem);
     padding-bottom: 0;
 
@@ -90,11 +89,8 @@ main {
     justify-content: flex-start;
     align-content: center;
 
-    /* AQUI ESTÁ A CORREÇÃO: min-height em vez de height */
     min-height: calc(100vh - 150px);
-    height: auto; /* Permite crescer se os filhos quebrarem */
-
-    /* Reduza ou use uma margem responsiva se necessário */
+    height: auto; 
     margin-bottom: 4rem; 
 }
 
@@ -136,7 +132,11 @@ main {
 }
 
 .botao-area img {
-    width: clap();
+    width: clamp(6rem, 35vw, 15rem);
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
 }
 
 @media (min-width: 900px)and (max-width: 1300px) {
