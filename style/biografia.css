@@ -1,0 +1,139 @@
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #CCDEFE;
+  --bg-tertiary: #FFDE98;
+
+  --title-primary: #d34604;
+  --title-secondary: #4C8EFF;
+
+  --text-primary: rgba(0, 0, 0, 0.76);
+  --text-secondary: #876859;
+
+  --border-color-primary: #FFDE98;
+  --border-color-secondary:#4C8EFF;
+  --highlight : #4C8EFF;
+}
+
+@font-face {
+    font-family: 'destaque';
+    src: url('../fonts/jaro regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; 
+}
+
+@font-face {
+    font-family: 'padrao';
+    src: url('../fonts/ADLaMDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
+    font-family: "padrao" ;
+}
+
+
+/* HEADER */
+.fundo-header {
+    background-color: var(--bg-tertiary) !important; 
+    padding: 25px
+}
+
+.navbar-toggler-icon {
+
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23d34604' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+.logo-img{
+    width: clamp(30px, 5vw, 80px);
+}
+
+.minoria img{
+    width: clamp(20px, 5vw, 60px);
+
+}
+
+.titulo {
+    color: var(--title-primary);
+    font-family: 'padrao';
+    font-size: clamp(1.5rem, 2vw + 1rem, 4rem);
+    margin: 0;
+}
+
+
+
+
+
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-right: clamp(1rem, 50vw + 0.5rem, 3.5rem);
+    padding-left: clamp(1rem, 50vw + 0.5rem, 3.5rem);
+}
+
+
+
+.conteudo-biografia{
+    width: 100%; 
+    padding: clamp(1rem, 4vw, 4rem) 1rem 0; 
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+
+    min-height: calc(100vh - 150px);
+    height: auto; 
+
+    row-gap: 2rem;
+
+}
+
+
+.biografia {
+    padding: clamp(1.5rem, 3vw + 0.5rem, 3rem) clamp(1rem, 4vw, 2.5rem);
+    
+    max-width: 75ch;
+    margin: 0 auto;
+    
+    line-height: 1.7;
+    font-size: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);   
+}
+
+.txt-destaque{
+    color: var(--highlight );
+}
+
+.fonte-img {
+    text-align: center;
+    opacity: 80%;
+}
+
+.card-title {
+    color: var(--title-secondary);
+    font-size: 1.5rem;
+}
+.info-pesquisador {
+    padding-top: 0.75rem;
+    color: var(--title-primary);
+    
+}
+
+.info-pesquisador h2 {
+    font-size: 1rem;
+}
+
+footer {
+    background-color: var(--bg-tertiary);
+    padding: 15px;
+    text-align: center;
+    color: var(--title-primary);
+
+    margin-top: 2rem;
+}
