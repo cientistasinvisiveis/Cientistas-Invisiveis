@@ -37,7 +37,13 @@ body {
     font-family: "padrao";
 }
 
-
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-right: clamp(1rem, 50vw + 0.5rem, 3.5rem);
+    padding-left: clamp(1rem, 50vw + 0.5rem, 3.5rem);
+}
 
 
 
