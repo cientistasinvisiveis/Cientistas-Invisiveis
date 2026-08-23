@@ -14,53 +14,43 @@
 
 <body>
     <header class="sticky-top">
-        <nav class="bg-titulo navbar fundo-header">
-            <div class="container-fluid d-flex align-items-center justify-content-betwen gap-2 mx-2">
+        <nav class="bg-titulo navbar fundo-header px-1 px-sm-2">
+            <div class="container-fluid d-flex align-items-center justify-content-between p-0">
 
                 <div class="start d-flex align-items-center">
-                    <button class="navbar-toggler me-3 border-0 type=" button data-bs-toggle="collapse"
+                    <button class="navbar-toggler p-0 border-0 me-1 me-sm-3" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand d-flex align-items-center justify" href="index.html">
-                        <img class="logo-img" src="img\header\logo.png" alt="Logo Cientistas Invisíveis"
-                            class="d-inline-block align-text-top">
+                    <a class="navbar-brand d-flex align-items-center me-0" href="index.html">
+                        <img class="logo-img" src="img/header/logo.png" alt="Logo Cientistas Invisíveis">
                         <h1 class="titulo">Cientistas Invisiveis</h1>
-
                     </a>
                 </div>
-                <div class="grupos-minoritarios d-flex">
+
+                <div class="grupos-minoritarios d-flex align-items-center">
                     <div class="minoria">
                         <a href="minoria.html">
-                            <img src="img\header\LGBT.png" alt="Logo Cientistas Invisíveis"
-                                class="d-inline-block align-text-top">
+                            <img src="img/header/LGBT.png" alt="LGBT">
                         </a>
                     </div>
-
                     <div class="minoria">
                         <a href="minoria.html">
-                            <img src="img\header\Feminismo.png" alt="Logo Cientistas Invisíveis"
-                                class="d-inline-block align-text-top">
+                            <img src="img/header/Feminismo.png" alt="Feminismo">
                         </a>
                     </div>
-
                     <div class="minoria">
                         <a href="minoria.html">
-                            <img src="img\header\MovimentoPCD.png" alt="Logo Cientistas Invisíveis"
-                                class="d-inline-block align-text-top">
+                            <img src="img/header/MovimentoPCD.png" alt="Movimento PCD">
                         </a>
                     </div>
-
                     <div class="minoria">
                         <a href="minoria.html">
-                            <img src="img\header\MovimentoNegro.png" alt="Logo Cientistas Invisíveis"
-                                class="d-inline-block align-text-top">
+                            <img src="img/header/MovimentoNegro.png" alt="Movimento Negro">
                         </a>
                     </div>
                 </div>
-
-
 
             </div>
         </nav>
@@ -156,7 +146,10 @@
                 </button>
             </div>
 
-            <h3 class="saiba-mais">Saiba mais sobre o movimento</h3>
+            <div class="saiba-mais">
+                <h3">Saiba mais sobre o movimento</h3> 
+                <span class="seta-baixo">&#x25BC;</span>
+            </div>
 
         </div>
 
@@ -179,12 +172,12 @@
                     sit amet consectetur adipisicing elit. Nihil vel assumenda eius illum at, quidem ex odit voluptatum
                     magni ipsam dolor dolorem debitis maiores a dolorum fuga omnis officiis labore!</p>
             </div>
-        </div>
 
-        <div class="col-12 text-center">
-            <h2 class="titulo-secao-listagem">Pesquisadores</h2>
+        <div class="row mb-4 conteudo-pesquisadores">
+            <div class="col-12 text-center">
+                <h2 class="titulo-secao-listagem">Pesquisadores</h2>
+            </div>
         </div>
-
 
         <div class="row row-cols-1 row-cols-md-2 g-4">
 
@@ -208,6 +201,7 @@
                 </div>
             </div>
 
+
             <div class="col pesquisadores">
                 <div class="card h-100 shadow-sm border-0">
                     <div class="row g-0 h-100">
@@ -228,6 +222,10 @@
                 </div>
             </div>
         </div>
+
+
+
+
 
     </main>
 
