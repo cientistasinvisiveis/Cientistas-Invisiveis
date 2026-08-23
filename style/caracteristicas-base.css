@@ -16,6 +16,19 @@
   --highlight2 : #FFC851;
 }
 
+
+[data-bs-theme="dark"] {
+    --bg-primary: #121212;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #2a2a2a;
+
+    --title-primary: #ff7a3d;
+    --title-secondary: #73a7ff;
+
+    --text-primary: #e2e8f0;
+    --text-secondary: #cbd5e1;
+}
+
 @font-face {
     font-family: 'destaque';
     src: url('../fonts/jaro regular.ttf') format('truetype');
@@ -34,7 +47,10 @@
 
 
 body {
-    font-family: "padrao";
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: padrao;
 }
 
 main {
@@ -54,6 +70,12 @@ main {
     color: var(--highlight );
 }
 
+
+.desenvolvimento {
+    font-size: 0.7rem;
+    text-align: center;
+    color: var(--highlight);
+}
 
 
 
@@ -95,6 +117,31 @@ main {
 }
 
 
+
+
+
+
+
+/* MENU LATERAL */
+
+.menu-lateral {
+    background-color: var(--bg-secondary);
+    font-family: destaque;
+}
+
+.menu-titulo {
+    font-size: 2rem;
+    color: var(--title-primary);
+}
+
+.menu-body {
+    font-size: 1.5rem;
+}
+
+.menu-body a{
+    text-decoration: none;
+    color: var(--text-primary);
+}
 
 
 
