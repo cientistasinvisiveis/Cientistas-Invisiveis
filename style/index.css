@@ -189,9 +189,7 @@ main {
 
 
     width: 100%;
-    /* max-width: 590px;  */
     height: fit-content;    
-    /* max-height: 440px; */
 
     background-color: var(--bg-tertiary);
     border-radius: 30px;
@@ -219,7 +217,7 @@ main {
 
 
 
-.destaque{
+.txt-destaque{
     color: var(--highlight );
 }
 
