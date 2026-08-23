@@ -1,6 +1,3 @@
-
-
-
 .conteudo {
     width: 100%; 
     padding: clamp(1rem, 4vw, 2rem) 1rem 0; 
@@ -25,6 +22,10 @@
 .chamada-cientistas h1 {
     font-size: clamp(2rem, 4vw, 2.5rem); 
 }
+
+
+/* IMAGEM CIENTISTA */
+
 
 .carrossel-minorico {
     width: 100%;
@@ -54,6 +55,13 @@
     object-fit: cover;
     display: block;
 }
+
+
+
+/* INFO CIENTISTA */
+
+
+
 
 .cientista-info {
     width: 50%;
@@ -126,6 +134,9 @@
 }
 
 
+/* BOTÃO CARROSSEL */
+
+
 .botao-carrossel .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2373A7FF' stroke='%2373A7FF' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
 }
@@ -141,15 +152,35 @@
 }
 
 
+
+/* SAIBA MAIS */
+
+
+
 .saiba-mais {
-    padding-top: 3rem;
+    padding-top: clamp(1.2rem, 4vw, 3rem);
+    margin: 0;
+    text-align: center;
     color: var(--title-primary);
-    font-size: clamp(1.1rem, 1rem + 1.5vw, 1.5rem) !important;
+    line-height: 1.2;
+    font-size: clamp(0.95rem, 1.5vw + 0.5rem, 1.4rem) !important;
 }
 
 .seta-baixo {
-    color: var(--highlight2)
+    color: var(--highlight2);
+    font-size: clamp(0.7rem, 1vw + 0.3rem, 0.9rem);
+    display: inline-block;
+    vertical-align: middle;
 }
+
+
+
+/* HISTÓRIA */
+
+
+
+
+
 
 .conteudo-movimento{
     width: 100%; 
@@ -166,18 +197,22 @@
 
 
 .titulo-historia-comunidade {
-    font-size: clamp(2rem, 4vw, 2.5rem); 
     color: var(--title-primary);
+    text-align: center;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0 clamp(0.5rem, 2vw, 1rem);
+    font-size: clamp(1.3rem, 2.5vw + 0.5rem, 2.4rem); 
 }
 
 .historia-comunidade {
-    padding: clamp(1.5rem, 3vw + 0.5rem, 3rem) clamp(1rem, 4vw, 2.5rem);
+    padding: clamp(0.75rem, 3vw, 2rem) clamp(0.75rem, 3vw, 2rem);
     
     max-width: 75ch;
     margin: 0 auto;
     
-    line-height: 1.7;
-    font-size: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);   
+    line-height: 1.6;
+    font-size: clamp(0.9rem, 1vw + 0.45rem, 1.1rem);   
 }
 
 

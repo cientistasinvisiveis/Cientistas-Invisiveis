@@ -47,6 +47,14 @@ main {
 
 
 
+/* TEXTO */
+
+
+.txt-destaque{
+    color: var(--highlight );
+}
+
+
 
 
 
@@ -90,27 +98,17 @@ main {
 
 
 
+/* LISTAGEM DE PESQUISADORES */
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-.conteudo-pesquisadores{
-    width: 100%; 
-
-
-    margin-top: 8rem;
-    margin-bottom: 4rem; 
-
+.conteudo-pesquisadores {
+    width: 100%;
+    margin-top: clamp(2.5rem, 8vw, 8rem);
+    margin-bottom: clamp(2rem, 5vw, 4rem);
 }
 
 .listagem-cientistas {
@@ -155,14 +153,7 @@ main {
 
 
 
-
-
-
-
-
-
-
-
+/* FOOTER */
 
 
 
@@ -171,9 +162,12 @@ main {
 
 footer {
     background-color: var(--bg-tertiary);
-    padding: 15px;
-    text-align: center;
     color: var(--title-primary);
-
-    margin-top: 3rem;
+    text-align: center;
+    
+    padding: clamp(0.75rem, 2.5vw, 1.25rem) 1rem;
+    margin-top: clamp(1.5rem, 5vw, 3rem);
+    
+    line-height: 1.4;
+    font-size: clamp(0.75rem, 1.2vw + 0.35rem, 0.95rem);
 }

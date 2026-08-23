@@ -11,6 +11,9 @@
     height: auto; 
 }
 
+
+
+
 .titulo-area {
     font-size: clamp(2rem, 4vw, 2.5rem); 
     color: var(--title-primary);
@@ -27,16 +30,21 @@
 }
 
 .card-foto-area {
-    width: 100%;
+    width: min(100%, clamp(200px, 60vw, 360px));
+    margin: 0 auto; 
+    
     aspect-ratio: 16 / 10;
-    max-height: 22vh; 
-    border: 3px solid var(--highlight);
-    border-radius: 12px;
+    max-height: clamp(120px, 18vh, 22vh); 
+    
+    border: clamp(2px, 0.5vw, 3px) solid var(--highlight);
+    border-radius: clamp(8px, 2vw, 12px);
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .card-foto-area img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
