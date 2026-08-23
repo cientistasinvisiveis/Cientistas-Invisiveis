@@ -39,7 +39,7 @@ body {
 /* HEADER */
 .fundo-header {
     background-color: var(--bg-tertiary) !important; 
-    padding: 25px
+    padding: 10px;
 }
 
 .navbar-toggler-icon {
