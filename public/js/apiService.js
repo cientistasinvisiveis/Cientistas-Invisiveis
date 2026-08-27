@@ -10,3 +10,11 @@ export async function getPesquisadores() {
     return [];
   }
 }
+
+
+(async () => {
+  const dados = await getPesquisadores();
+  console.log('✅ Dados no console:');
+  console.log(dados);
+  console.table(dados);
+})();
