@@ -10,7 +10,13 @@ export async function listarPesquisadores(req, res) {
     });
     return res.json(lista);
   } catch (error) {
-    console.error('❌ ERRO DETALHADO NO SEQUELIZE:', error); // <- Vai exibir o erro real no terminal
-    return res.status(500).json({ erro: error.message, stack: error.stack });
+    console.error('❌ ERRO NO BACKEND/SEQUELIZE:', error);
+    return res.status(500).json({
+      status: 'Erro 500 no Backend',
+      mensagem: error.message,
+      detalhes: error.parent ? error.parent.message : null,
+      sql: error.sql || null,
+      nomeErro: error.name
+    });
   }
 }
