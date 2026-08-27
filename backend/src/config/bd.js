@@ -1,4 +1,5 @@
 import { Sequelize } from 'sequelize';
+import mysql2 from 'mysql2'; // Import direto para forçar o empacotamento
 import 'dotenv/config';
 
 export const sequelize = new Sequelize(
@@ -9,10 +10,11 @@ export const sequelize = new Sequelize(
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
     dialect: 'mysql',
+    dialectModule: mysql2, // <-- OBRIGATÓRIO NA VERCEL
     dialectOptions: {
       ssl: {
         require: true,
-        rejectUnauthorized: false, // Necessário para o Aiven aceitar a conexão da Vercel
+        rejectUnauthorized: false,
       },
     },
     logging: false,
