@@ -1,4 +1,5 @@
 import express from 'express';
+import path from 'path';
 import cors from 'cors';
 import pesquisadorRouter from './routes/pesquisadorRouter.js'; 
 import indexRoutes from './routes/indexRouter.js'
