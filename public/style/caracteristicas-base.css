@@ -149,7 +149,11 @@ main {
 
 
 
-
+.conteudo-pesquisadores {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
 
 
 .conteudo-pesquisadores {
@@ -172,8 +176,8 @@ main {
 
 
 .pesquisadores .card {
-    max-width: 480px; 
-    margin: 0 auto;
+    min-height: 160px;
+    width: 100%;
 }
 
 

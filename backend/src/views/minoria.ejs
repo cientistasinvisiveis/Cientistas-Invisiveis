@@ -93,7 +93,7 @@
                                                 </div>
                                             </div>
                                             <p class="descricao-carrossel">
-                                                <%= pesquisador.resumo 
+                                                <%= pesquisador.resumo
                                                     || 'Sem descrição cadastrada para este cientista.' %>
                                             </p>
                                         </div>
@@ -147,7 +147,7 @@
                     </div>
                 </div>
 
-                <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="row row-cols-1 row-cols-md-2 g-4 w-100 justify-content-center">
                     <% if (pesquisadores && pesquisadores.length> 0) { %>
                         <% pesquisadores.forEach(pesquisador=> { %>
                             <div class="col pesquisadores">
@@ -168,7 +168,8 @@
                                                         pesquisador.biografia.substring(0, 90) + '...'
                                                         : 'Sem descrição cadastrada.' ) %>
                                                 </p>
-                                                <a href="/biografia?id=<%= pesquisador.id_pesquisador %>" class="link-biografia">
+                                                <a href="/biografia?id=<%= pesquisador.id_pesquisador %>"
+                                                    class="link-biografia">
                                                     Ver biografia &rarr;
                                                 </a>
                                             </div>
@@ -177,12 +178,14 @@
                                 </div>
                             </div>
                             <% }) %>
-                                <% } else { %>
-                                    <div class="col-12 text-center">
-                                        <p class="text-muted">Nenhum pesquisador listado nesta comunidade.</p>
-                                    </div>
-                                    <% } %>
+                                <% } %>
                 </div>
+                <% }) %>
+                    <% } else { %>
+                        <div class="col-12 text-center">
+                            <p class="text-muted">Nenhum pesquisador listado nesta comunidade.</p>
+                        </div>
+                        <% } %>
             </div>
         </main>
     </main>
