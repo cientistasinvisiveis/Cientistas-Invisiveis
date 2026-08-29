@@ -1,6 +1,5 @@
 import { Minoria, Pesquisador } from '../models/index.js';
 
-// Converte BLOB para Base64 se a foto for salva em binário
 function blobParaBase64(blob) {
   if (!blob) return null;
   return `data:image/jpeg;base64,${Buffer.from(blob).toString('base64')}`;
@@ -8,10 +7,8 @@ function blobParaBase64(blob) {
 
 export async function renderMinoria(req, res) {
   try {
-    // Captura o nome da minoria vindo pela URL (ex: /minoria?nome=Mulheres)
     const nomeMinoria = req.query.nome;
 
-    // Busca a minoria pelo seu identificador primário (nome) e inclui os pesquisadores
     const minoria = await Minoria.findOne({
       where: { nome: nomeMinoria },
       include: [
@@ -23,7 +20,6 @@ export async function renderMinoria(req, res) {
       ]
     });
 
-    // Se não encontrar no banco, renderiza página com aviso
     if (!minoria) {
       return res.status(404).render('minoria', {
         minoria: null,
@@ -32,7 +28,6 @@ export async function renderMinoria(req, res) {
       });
     }
 
-    // Trata os dados dos pesquisadores
     const pesquisadoresTratados = minoria.pesquisadores.map(p => {
       const item = p.toJSON();
       return {
@@ -41,7 +36,6 @@ export async function renderMinoria(req, res) {
       };
     });
 
-    // Envia os dados estruturados usando o campo 'descricao' do seu model
     return res.render('minoria', {
       minoria: {
         nome: minoria.nome,

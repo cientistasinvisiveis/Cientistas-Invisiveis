@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { renderMinoria } from '../controllers/minoriaController';
+import { renderMinoria } from '../controllers/minoriaController.js';
 
 const router = Router();
 
