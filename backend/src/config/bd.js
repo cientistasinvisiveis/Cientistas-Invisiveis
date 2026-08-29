@@ -1,5 +1,5 @@
 import { Sequelize } from 'sequelize';
-import mysql2 from 'mysql2'; // Import direto para forçar o empacotamento
+import mysql2 from 'mysql2'; 
 import 'dotenv/config';
 
 export const sequelize = new Sequelize(
@@ -10,7 +10,7 @@ export const sequelize = new Sequelize(
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
     dialect: 'mysql',
-    dialectModule: mysql2, // <-- OBRIGATÓRIO NA VERCEL
+    dialectModule: mysql2, 
     dialectOptions: {
       ssl: {
         require: true,
