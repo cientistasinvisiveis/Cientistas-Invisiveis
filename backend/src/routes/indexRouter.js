@@ -6,4 +6,7 @@ const router = Router();
 
 router.get('/', renderIndex);
 
-module.exports = router;
+export default router;
+
+
+

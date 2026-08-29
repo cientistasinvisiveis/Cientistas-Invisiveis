@@ -15,7 +15,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, '..', '..', 'public')));
 
 
-const indexRoutes = require('./routes/indexRouter.js');
 app.use('/', indexRoutes);
 
 app.use('/api/pesquisadores', pesquisadorRouter);
