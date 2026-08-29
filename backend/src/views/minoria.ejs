@@ -77,7 +77,7 @@
                             <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
                                 <div class="slide-conteudo">
                                     <div class="slide-imagem">
-                                        <img src="<%= pesquisador.img%>"
+                                        <img src="<%= pesquisador.img || '/img/area-pesquisa/sem-foto-perfil.png'%>"
                                             alt="<%= pesquisador.nome %>">
                                     </div>
                                     <div class="cientista-info">
