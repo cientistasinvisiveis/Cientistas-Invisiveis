@@ -22,7 +22,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <a class="navbar-brand d-flex align-items-center me-0" href="index.html">
+                    <a class="navbar-brand d-flex align-items-center me-0" href="index.ejs">
                         <img class="logo-img" src="img/header/logo.png" alt="Logo Cientistas Invisíveis">
                         <h1 class="titulo">Cientistas Invisiveis</h1>
                     </a>
@@ -60,16 +60,13 @@
                 <%= area ? area.nome : 'Área' %>
             </h1>
 
-            <!-- Descrição da Área -->
             <div id="descricao-area" class="descricao-area">
                 <p>
                     <%= area ? area.descricao : 'Descrição não informada.' %>
                 </p>
             </div>
 
-            <!-- Imagens da Área -->
             <div class="row g-3 g-md-4 justify-content-center">
-                <!-- Imagem 1 -->
                 <div class="col-12 col-md-4">
                     <div class="card-foto-area">
                         <img id="img-area"
@@ -79,7 +76,6 @@
                     </div>
                 </div>
 
-                <!-- Imagem 2 -->
                 <div class="col-12 col-md-4">
                     <div class="card-foto-area">
                         <img id="img-area-2"
@@ -89,7 +85,6 @@
                     </div>
                 </div>
 
-                <!-- Imagem 3 -->
                 <div class="col-12 col-md-4">
                     <div class="card-foto-area">
                         <img src="<%= (area && area.img_3) ? area.img_3 : 'https://picsum.photos/600/400?random=3' %>"
@@ -99,14 +94,12 @@
                 </div>
             </div>
 
-            <!-- Título da Seção de Pesquisadores -->
             <div class="row mb-4 conteudo-pesquisadores">
                 <div class="col-12 text-center">
                     <h2 class="titulo-secao-listagem">Pesquisadores</h2>
                 </div>
             </div>
 
-            <!-- Grid de Cards de Pesquisadores -->
             <div class="row row-cols-1 row-cols-md-2 g-4">
                 <% if (pesquisadores && pesquisadores.length> 0) { %>
                     <% pesquisadores.forEach(pesquisador=> { %>
