@@ -3,6 +3,7 @@ import path from 'path';
 import cors from 'cors';
 import pesquisadorRouter from './routes/pesquisadorRouter.js'; 
 import indexRoutes from './routes/indexRouter.js'
+import renderAreaPesquisa from './routes/areaPesquisaRouter.js';
 
 const app = express();
 
@@ -16,5 +17,6 @@ app.use(express.static(path.join(process.cwd(), 'public')));
 
 app.use('/', indexRoutes);
 app.use('/api/pesquisadores', pesquisadorRouter);
+app.use('/', renderAreaPesquisa);
 
 export default app;
