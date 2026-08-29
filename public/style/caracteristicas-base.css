@@ -105,6 +105,18 @@ main {
 .minoria img {
     width: clamp(25px, 3.5vw, 60px);
     display: block;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.minoria img:hover {
+    transform: translateY(-3px) scale(1.1);
+    filter: brightness(1.15) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+.minoria img:active {
+    transform: translateY(0) scale(0.95);
+    filter: brightness(0.95);
 }
 
 .titulo {
@@ -178,6 +190,19 @@ main {
 .pesquisadores .card {
     min-height: 160px;
     width: 100%;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.pesquisadores .card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+    filter: brightness(1.02);
+}
+
+.pesquisadores .card:active {
+    transform: translateY(-1px) scale(0.99);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
 
