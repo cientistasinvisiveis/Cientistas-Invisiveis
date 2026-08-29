@@ -63,131 +63,130 @@
 
 
     <main>
-        <main>
-            <div class="conteudo">
-                <div class="chamada-cientistas">
-                    <h1>Figuras da Comunidade <%= minoria ? minoria.nome : 'X' %>
-                    </h1>
-                </div>
 
-                <div id="carouselExample" class="carousel slide carrossel-minorico" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <% if (pesquisadores && pesquisadores.length> 0) { %>
-                            <% pesquisadores.forEach((pesquisador, index)=> { %>
-                                <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
-                                    <div class="slide-conteudo">
-                                        <div class="slide-imagem">
-                                            <img src="<%= pesquisador.foto || 'https://picsum.photos/1920/1080?random=' + (index + 1) %>"
-                                                alt="<%= pesquisador.nome %>">
-                                        </div>
-                                        <div class="cientista-info">
-                                            <div class="cabecalho-cientista">
-                                                <h2 class="nome-carrossel">
-                                                    <%= pesquisador.nome %>
-                                                </h2>
-                                                <div class="conhecer-cientista">
-                                                    <a href="/biografia?id=<%= pesquisador.id %>"
-                                                        style="text-decoration: none; color: inherit;">
-                                                        <p>!</p>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <p class="descricao-carrossel">
-                                                <%= pesquisador.resumo
-                                                    || 'Sem descrição cadastrada para este cientista.' %>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <% }) %>
-                                    <% } else { %>
-                                        <div class="carousel-item active">
-                                            <div class="slide-conteudo text-center p-5">
-                                                <p class="text-muted">Nenhum pesquisador vinculado a esta comunidade no
-                                                    momento.</p>
-                                            </div>
-                                        </div>
-                                        <% } %>
-                    </div>
-
-                    <button class="carousel-control-prev botao-carrossel" type="button"
-                        data-bs-target="#carouselExample" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    <button class="carousel-control-next botao-carrossel" type="button"
-                        data-bs-target="#carouselExample" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Próximo</span>
-                    </button>
-                </div>
-
-                <div class="saiba-mais">
-                    <h3>Saiba mais sobre o movimento</h3>
-                    <span class="seta-baixo">&#x25BC;</span>
-                </div>
+        <div class="conteudo">
+            <div class="chamada-cientistas">
+                <h1>Figuras da Comunidade <%= minoria ? minoria.nome : 'X' %>
+                </h1>
             </div>
 
-            <div class="conteudo-movimento">
-                <h2 class="titulo-historia-comunidade">História do movimento</h2>
-
-                <div class="historia-comunidade">
-                    <% if (minoria && minoria.descricao) { %>
-                        <p>
-                            <%= minoria.descricao %>
-                        </p>
-                        <% } else { %>
-                            <p class="text-muted">Descrição da comunidade não informada.</p>
-                            <% } %>
-                </div>
-
-                <div class="row mb-4 conteudo-pesquisadores">
-                    <div class="col-12 text-center">
-                        <h2 class="titulo-secao-listagem">Pesquisadores</h2>
-                    </div>
-                </div>
-
-                <div class="row row-cols-1 row-cols-md-2 g-4 w-100 justify-content-center">
+            <div id="carouselExample" class="carousel slide carrossel-minorico" data-bs-ride="carousel">
+                <div class="carousel-inner">
                     <% if (pesquisadores && pesquisadores.length> 0) { %>
-                        <% pesquisadores.forEach(pesquisador=> { %>
-                            <div class="col pesquisadores">
-                                <div class="card h-100 shadow-sm border-0">
-                                    <div class="row g-0 h-100">
-                                        <div class="col-4">
-                                            <img src="<%= pesquisador.foto || '/img/area-pesquisa/sem-foto-perfil.png' %>"
-                                                class="img-fluid rounded-start h-100 w-100 object-fit-cover"
-                                                alt="Foto de <%= pesquisador.nome %>">
-                                        </div>
-                                        <div class="col-8">
-                                            <div class="card-body d-flex flex-column justify-content-center h-100">
-                                                <h5 class="card-title mb-1">
-                                                    <%= pesquisador.nome %>
-                                                </h5>
-                                                <p class="card-text text-muted small mb-2">
-                                                    <%= pesquisador.resumo || (pesquisador.biografia ?
-                                                        pesquisador.biografia.substring(0, 90) + '...'
-                                                        : 'Sem descrição cadastrada.' ) %>
-                                                </p>
-                                                <a href="/biografia?id=<%= pesquisador.id_pesquisador %>"
-                                                    class="link-biografia">
-                                                    Ver biografia &rarr;
+                        <% pesquisadores.forEach((pesquisador, index)=> { %>
+                            <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
+                                <div class="slide-conteudo">
+                                    <div class="slide-imagem">
+                                        <img src="<%= pesquisador.foto || 'https://picsum.photos/1920/1080?random=' + (index + 1) %>"
+                                            alt="<%= pesquisador.nome %>">
+                                    </div>
+                                    <div class="cientista-info">
+                                        <div class="cabecalho-cientista">
+                                            <h2 class="nome-carrossel">
+                                                <%= pesquisador.nome %>
+                                            </h2>
+                                            <div class="conhecer-cientista">
+                                                <a href="/biografia?id=<%= pesquisador.id %>"
+                                                    style="text-decoration: none; color: inherit;">
+                                                    <p>!</p>
                                                 </a>
                                             </div>
                                         </div>
+                                        <p class="descricao-carrossel">
+                                            <%= pesquisador.resumo || 'Sem descrição cadastrada para este cientista.' %>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <% }) %>
-                                <% } %>
+                                <% } else { %>
+                                    <div class="carousel-item active">
+                                        <div class="slide-conteudo text-center p-5">
+                                            <p class="text-muted">Nenhum pesquisador vinculado a esta comunidade no
+                                                momento.</p>
+                                        </div>
+                                    </div>
+                                    <% } %>
                 </div>
-                <% }) %>
+
+                <button class="carousel-control-prev botao-carrossel" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next botao-carrossel" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+
+            <div class="saiba-mais">
+                <h3>Saiba mais sobre o movimento</h3>
+                <span class="seta-baixo">&#x25BC;</span>
+            </div>
+        </div>
+
+        <div class="conteudo-movimento">
+            <h2 class="titulo-historia-comunidade">História do movimento</h2>
+
+            <div class="historia-comunidade">
+                <% if (minoria && minoria.descricao) { %>
+                    <p>
+                        <%= minoria.descricao %>
+                    </p>
                     <% } else { %>
-                        <div class="col-12 text-center">
-                            <p class="text-muted">Nenhum pesquisador listado nesta comunidade.</p>
-                        </div>
+                        <p class="text-muted">Descrição da comunidade não informada.</p>
                         <% } %>
             </div>
-        </main>
+
+            <div class="row mb-4 conteudo-pesquisadores">
+                <div class="col-12 text-center">
+                    <h2 class="titulo-secao-listagem">Pesquisadores</h2>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 g-4 w-100 justify-content-center">
+                <% if (pesquisadores && pesquisadores.length> 0) { %>
+                    <% pesquisadores.forEach(pesquisador=> { %>
+                        <div class="col pesquisadores">
+                            <div class="card h-100 shadow-sm border-0">
+                                <div class="row g-0 h-100">
+                                    <div class="col-4">
+                                        <img src="<%= pesquisador.foto || '/img/area-pesquisa/sem-foto-perfil.png' %>"
+                                            class="img-fluid rounded-start h-100 w-100 object-fit-cover"
+                                            alt="Foto de <%= pesquisador.nome %>">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body d-flex flex-column justify-content-center h-100">
+                                            <h5 class="card-title mb-1">
+                                                <%= pesquisador.nome %>
+                                            </h5>
+                                            <p class="card-text text-muted small mb-2">
+                                                <% if (pesquisador.resumo) { %>
+                                                    <%= pesquisador.resumo %>
+                                                        <% } else if (pesquisador.biografia) { %>
+                                                            <%= pesquisador.biografia.substring(0, 90) %>...
+                                                                <% } else { %>
+                                                                    Sem descrição cadastrada.
+                                                                    <% } %>
+                                            </p>
+                                            <a href="/biografia?id=<%= pesquisador.id_pesquisador %>"
+                                                class="link-biografia">
+                                                Ver biografia &rarr;
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <% }) %>
+                            <% } else { %>
+                                <div class="col-12 text-center">
+                                    <p class="text-muted">Nenhum pesquisador encontrado.</p>
+                                </div>
+                                <% } %>
+            </div>
     </main>
 
 
