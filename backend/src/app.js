@@ -4,7 +4,7 @@ import cors from 'cors';
 import pesquisadorRouter from './routes/pesquisadorRouter.js'; 
 import indexRoutes from './routes/indexRouter.js'
 import renderAreaPesquisa from './routes/areaPesquisaRouter.js';
-import minoriaRoutes from './routes/minoriaRoutes.js';
+import minoriaRoutes from './routes/minoriaRouter.js';
 
 
 const app = express();
