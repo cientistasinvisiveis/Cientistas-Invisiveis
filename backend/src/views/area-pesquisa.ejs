@@ -105,7 +105,7 @@
                 </div>
             </div>
 
-            <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="row row-cols-1 row-cols-md-2 g-4 w-100 justify-content-center">
                 <% if (pesquisadores && pesquisadores.length> 0) { %>
                     <% pesquisadores.forEach(pesquisador=> { %>
                         <div class="col pesquisadores">
@@ -122,11 +122,16 @@
                                                 <%= pesquisador.nome %>
                                             </h5>
                                             <p class="card-text text-muted small mb-2">
-                                                <%= pesquisador.resumo || pesquisador.biografia ? (pesquisador.resumo ||
-                                                    pesquisador.biografia.substring(0, 90) + '...' )
-                                                    : 'Sem descrição cadastrada.' %>
+                                                <% if (pesquisador.resumo) { %>
+                                                    <%= pesquisador.resumo %>
+                                                        <% } else if (pesquisador.biografia) { %>
+                                                            <%= pesquisador.biografia.substring(0, 90) %>...
+                                                                <% } else { %>
+                                                                    Sem descrição cadastrada.
+                                                                    <% } %>
                                             </p>
-                                            <a href="/biografia?id=<%= pesquisador.id %>" class="link-biografia">
+                                            <a href="/biografia?id=<%= pesquisador.id_pesquisador %>"
+                                                class="link-biografia">
                                                 Ver biografia &rarr;
                                             </a>
                                         </div>
@@ -137,7 +142,7 @@
                         <% }) %>
                             <% } else { %>
                                 <div class="col-12 text-center">
-                                    <p class="text-muted">Nenhum pesquisador encontrado nesta área.</p>
+                                    <p class="text-muted">Nenhum pesquisador encontrado.</p>
                                 </div>
                                 <% } %>
             </div>
