@@ -4,7 +4,6 @@ export async function getPesquisadores() {
   try {
     const response = await fetch(API_URL);
 
-    // Se o backend retornou 500, lemos o JSON de diagnóstico que criamos
     if (!response.ok) {
       const dadosErro = await response.json().catch(() => ({}));
       console.group('🔥 DIAGNÓSTICO DO ERRO DO BACKEND');
@@ -24,7 +23,6 @@ export async function getPesquisadores() {
   }
 }
 
-// Executa imediatamente para testar
 (async () => {
   const dados = await getPesquisadores();
   console.log('✅ Dados no console:', dados);
