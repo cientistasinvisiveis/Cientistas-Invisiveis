@@ -32,7 +32,7 @@ export async function renderMinoria(req, res) {
       const item = p.toJSON();
       return {
         ...item,
-        foto: p.foto ? (typeof p.foto === 'string' ? p.foto : blobParaBase64(p.foto)) : null
+        img: p.img ? (typeof p.img === 'string' ? p.img : blobParaBase64(p.img)) : null
       };
     });
 
